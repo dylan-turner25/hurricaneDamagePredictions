@@ -1,19 +1,9 @@
 # Work space setup -------------------------------------------
-{ 
-  rm(list = ls()) # clear console
-  options(scipen = 999) # forces R to avoid exponential notation
-  system.info <- Sys.info()
-  
-  # set location of dropbox folder 
-  if(system.info[[8]] == "dylanturner"){
-    db.loc <- "/Users/dylanturner/Dropbox" # desktop
-  } else {
-    db.loc <- "/home/dylan/Dropbox"
-  }
-  
-  # set working directory within dropbox folder
-  setwd(paste(db.loc,"/Research/Hurricane Damage Predictions", sep = ""))
-}
+rm(list = ls()) # clear console
+options(scipen = 999) # forces R to avoid exponential notation
+system.info <- Sys.info()
+setwd("")
+
 
 
 # Load Libraries --------------------------------------------
