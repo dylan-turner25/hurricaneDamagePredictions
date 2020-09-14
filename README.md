@@ -29,6 +29,8 @@ To generate the predicted distribution of damage in the event of a hurricane, th
   5) Repeat steps 3 and 4 many times to generate n single predictions. This set of n predictions forms the predicted distribution of hurricane damage for that observation.
   
   6) repeat step 1 - 5 for all observations in the test data.
+  
+  See predicted_claim_example.png for an example of a predicted distribution for a single household compared against the observed damage from the flood insurance claims dat
 
 
 ## Step 5: Validate
