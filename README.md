@@ -34,4 +34,5 @@ To generate the predicted distribution of damage in the event of a hurricane, th
 
 
 ## Step 5: Validate
-Check how often observed nfip claims fall within the predicted distribution. 
+Check how often observed nfip claims fall within the predicted distribution. Currently, observed nfip claims are contained in the predicted damage interval 67% of the time and the average observation has a observed nfip claim that is at the 43rd percentile of the predicted damage distribution.
+
