@@ -1,5 +1,5 @@
 # hurricaneDamagePredictions
-Using publicly available data flood insurance claims and FEMA disaster assistance to predict household level hurricane damage distributions
+Using publicly available data on flood insurance claims and FEMA disaster assistance to predict household level hurricane damage distributions
 
 ## Objective:
 Engineering based damage functions for hurricanes rely on specific inputs about precise storm conditions and difficult to obtain home characteristics. This project attempts to predict distributions of hurricane damage for individual households by combining past flood insurance claims with historical hurricane conditions. The folloing steps are used to generate the predictions.
