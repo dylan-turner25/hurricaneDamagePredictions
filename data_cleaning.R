@@ -1,19 +1,8 @@
 # Work space setup -------------------------------------------
-{ 
   rm(list = ls()) # clear console
   options(scipen = 999) # forces R to avoid exponential notation
-  system.info <- Sys.info()
-  
-  # set location of dropbox folder 
-  if(system.info[[8]] == "dylanturner"){
-    db.loc <- "/Users/dylanturner/Dropbox" # desktop
-  } else {
-    db.loc <- "/home/dylan/Dropbox"
-  }
-  
-  # set working directory within dropbox folder
-  setwd(paste(db.loc,"/Research/Hurricane Damage Predictions", sep = ""))
-}
+  setwd("")
+
 
 
 # Load Libraries --------------------------------------------
@@ -32,7 +21,7 @@
     library(usmap) # contains  fips() for converting county name to fips code
 
 # loading and cleaning historical hurricane data ------------------------------    
-recalculate <- 0
+recalculate <- 0 
 if(recalculate == 1){
     #load historical hurricane exposure data
         data("hurr_tracks")
