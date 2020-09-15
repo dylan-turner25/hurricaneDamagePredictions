@@ -14,6 +14,7 @@ NOTE: Everthing related to Individual and Household Programs (IHP) is coming soo
 
 "xgb_training_nfip.ipynb": does the same as "xgb_training_nfip.ipynb" but with FEMAs individual and household programs data set.
 
+### Damage Predictions on New Data
 "get_predictions.ipynb": loads the trained xgboost models and generates predicted distributions of hurricane damage on new data. 
 
 ## Objective:
