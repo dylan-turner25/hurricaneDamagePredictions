@@ -1,9 +1,19 @@
 # Work space setup -------------------------------------------
-rm(list = ls()) # clear console
-options(scipen = 999) # forces R to avoid exponential notation
-system.info <- Sys.info()
-setwd("")
-
+{ 
+  rm(list = ls()) # clear console
+  options(scipen = 999) # forces R to avoid exponential notation
+  system.info <- Sys.info()
+  
+  # set location of dropbox folder 
+  if(system.info[[8]] == "dylanturner"){
+    db.loc <- "/Users/dylanturner/Dropbox" # desktop
+  } else {
+    db.loc <- "/home/dylan/Dropbox"
+  }
+  
+  # set working directory within dropbox folder
+  setwd(paste(db.loc,"/Research/Hurricane Damage Predictions", sep = ""))
+}
 
 
 # Load Libraries --------------------------------------------
@@ -250,7 +260,7 @@ if(recalculate == 1){
                               "floodZone","a_zone","v_zone","x_zone",
                               "sfha","floors","post_firm", "primary_res",
                               "hurr_cat","max_hurr_cat","assumed_home_value",
-                              "assumed_home_value_censored")]   
+                              "assumed_home_value_censored","latitude","longitude")]   
         
         
 # add inflation index ---------------------------------------------------------    
@@ -382,14 +392,15 @@ if(recalculate == 1){
           # add indicator: = 1 if coastal county
           nfip$coastal_county <- as.numeric(nfip$fips %in% coastal_counties$fips)   
           
-# subset data to only contain one target variable and predictor variables ----
-          
+# create inflation adjusted damage values ---------------------------------
+nfip$flood_structure_claim_adj2020 <- nfip$flood_structure_claim/nfip$inflation_factor2020       
+nfip$flood_contents_claim_adj2020 <- nfip$flood_structure_claim/nfip$inflation_factor2020    
+nfip$total_flood_damage_adj2020 <- nfip$flood_structure_claim_adj2020 + nfip$flood_contents_claim_adj2020
 
 # save cleaned data as a csv file --------------------------------------------
           write_csv(nfip, "./Data/nfip_data_cleaned.csv")
           
-          
-          
+
           
           
           
