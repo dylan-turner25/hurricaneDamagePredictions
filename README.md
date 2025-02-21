@@ -2,7 +2,6 @@
 Using publicly available data on flood insurance claims and FEMA disaster assistance to predict household level hurricane damage distributions
 
 ## Overview of Workflow
-NOTE: Everthing related to Individual and Household Programs (IHP) is coming soon.
 
 ### Data cleaning
 "nfip_data_cleaning.R" : imports data from FEMA's data set on national flood insurance program (NFIP) claims and cleans the data, then exports a cleaned csv file titled "nfip_data_cleaned"
